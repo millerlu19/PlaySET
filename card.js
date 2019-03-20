@@ -66,6 +66,11 @@ export default class Card {
 
 }
 
+Card.colors = colors;
+Card.shapes = shapes;
+Card.pattern = pattern;
+Card.number = number;
+
 function isValid(val1, val2, val3) {
 	if (val1 == val2 && val1 == val3) {
 		return true;
