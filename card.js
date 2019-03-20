@@ -1,67 +1,67 @@
 // card.js
 
+let colors = {
+	RED: "red",
+	GREEN: "green",
+	PURPLE: "purple"
+}
+
+let shapes = {
+	OVAL: "oval",
+	DIAMOND: "diamond"
+	SQUIGGLE: "squiggle"
+}
+
+let pattern = {
+	EMPTY: "empty",
+	FULL: "full",
+	STRIPES: "stripes"
+}
+
+let number = {
+	ONE: "one",
+	TWO: "two",
+	THREE: "three"
+}
+
 export default class Card {
-	constructor(card_color, card_shape, card_pattern, num_shapes) {
-		this.card_color = card_color;
-		this.card_shape = card_shape;
-		this.card_pattern = card_pattern;
-		this.num_shapes = num_shapes;
+	constructor(color, shape, pattern, number) {
+		this.color = color;
+		this.shape = shape;
+		this.pattern = pattern;
+		this.number = number;
 	}
 
-	colors = {
-		RED: "red",
-		GREEN: "green",
-		PURPLE: "purple"
+	setColor(newColor) {
+		this.color = newColor;
 	}
 
-	shapes = {
-		OVAL: "oval",
-		DIAMOND: "diamond"
-		SQUIGGLE: "squiggle"
+	setShape(newShape) {
+		this.shape = newShape;
 	}
 
-	pattern = {
-		EMPTY: "empty",
-		FULL: "full",
-		STRIPES: "stripes"
+	setPattern(newPattern) {
+		this.pattern = newPattern;
 	}
 
-	number = {
-		ONE: "one",
-		TWO: "two",
-		THREE: "three"
+	setNumber(newNumber) {
+		this.number = newNumber;
 	}
 
-	setCardColor(newColor) {
-		card_color = newColor;
+	getColor() {
+		return this.color;
 	}
 
-	setCardShape(newShape) {
-		card_shape = newShape;
+	getShape() {
+		return this.shape;
 	}
 
-	setCardPattern(newPattern) {
-		card_pattern = newPattern;
+	getPattern() {
+		return this.pattern;
 	}
 
-	setNumShapes(newNumShapes) {
-		num_shapes = newNumShapes;
-	}
-
-	getCardColor() {
-		return card_color;
-	}
-
-	getCardShape() {
-		return card_shape;
-	}
-
-	getCardPattern() {
-		return card_pattern;
-	}
-
-	getCardNumShapes() {
-		return num_shapes;
+	getNumber() {
+		return this.number;
 	}
 
 }
