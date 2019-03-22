@@ -14,8 +14,8 @@ let shapes = {
 
 let pattern = {
 	EMPTY: "empty",
-	FULL: "full",
 	STRIPES: "stripes"
+	FULL: "full",
 }
 
 let number = {
