@@ -8,14 +8,14 @@ let colors = {
 
 let shapes = {
 	OVAL: "oval",
-	DIAMOND: "diamond"
+	DIAMOND: "diamond",
 	SQUIGGLE: "squiggle"
 }
 
 let pattern = {
 	EMPTY: "empty",
-	STRIPES: "stripes"
-	FULL: "full",
+	STRIPES: "stripes",
+	FULL: "full"
 }
 
 let number = {

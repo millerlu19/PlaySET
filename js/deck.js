@@ -1,6 +1,6 @@
 // deck.js
 
-import Card from "card.js";
+import Card from "./card.js";
 
 let colorsArr = Object.values(Card.colors)
 let shapesArr = Object.values(Card.shapes)
@@ -28,9 +28,13 @@ export default class Deck {
 
 	}
 
+	size() {
+		return this.cardList.length;
+	}
+
 }
 
-function makeFullDeck() {
+Deck.makeFullDeck = function () {
 	let fullDeck = new Deck();
 	for (let c of colorsArr) {
 		for (let s of shapesArr) {
@@ -42,5 +46,6 @@ function makeFullDeck() {
 			}
 		}
 	}
+	return fullDeck;
 	
 }
