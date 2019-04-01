@@ -16,10 +16,6 @@ export default class Deck {
 		this.cardList.push(card);
 	}
 
-	take(num) {
-
-	}
-
 	removeCard(card) {
 		this.splice(this[card], 1);
 	}
@@ -55,12 +51,21 @@ Deck.makeFullDeck = function () {
 	return fullDeck;	
 }
 
-Deck.makePlayingField = function (fullDeck) {
-	let playingfield = new Deck();
+Deck.makePlayingField = function (deck) {
+	let playingField = new Deck();
 	for (x = 0; x < 12; x++) {
-		rand_card = fullDeck.getRandCard();
-		playingfield.addToDeck(rand_card);
-		fullDeck.removeCard(rand_card);
+		rand_card = deck.getRandCard();
+		playingField.addToDeck(rand_card);
+		deck.removeCard(rand_card);
 	}
-	return playingfield;
+	return playingField;
+}
+
+Deck.updatePlayingField = function (playingField, deck) {
+	for (x = 0; x < 3; x++) {
+		rand_card = deck.getRandCard();
+		playingField.addToDeck(rand_card);
+		deck.removeCard(rand_card);
+	}
+	return playingField
 }
