@@ -20,16 +20,22 @@ export default class Deck {
 
 	}
 
-	removeCard() {
-
+	removeCard(card) {
+		this.splice(this[card], 1);
 	}
 
-	removeSET() {
+	removeSET(card1, card2, card3) {
 
 	}
 
 	size() {
 		return this.cardList.length;
+	}
+
+	get_rand_card() {
+		rand_num = Math.random()*this.size();
+		rand_card = this[rand_num];
+		return rand_card;
 	}
 
 }
@@ -46,6 +52,15 @@ Deck.makeFullDeck = function () {
 			}
 		}
 	}
-	return fullDeck;
-	
+	return fullDeck;	
+}
+
+Deck.makePlayingField = function (fullDeck) {
+	let playingfield = new Deck();
+	for (x = 0; x < 12; x++) {
+		rand_card = fullDeck.get_rand_card();
+		playingfield.addToDeck(rand_card);
+		fullDeck.removeCard(rand_card);
+	}
+	return playingfield;
 }
