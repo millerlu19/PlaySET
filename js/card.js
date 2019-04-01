@@ -1,5 +1,7 @@
 // card.js
 
+// created enum objects for each of the 4 attributes that determines one specific card
+	// color, shape, pattern, number of shapes
 let colors = {
 	RED: "red",
 	GREEN: "green",
@@ -24,6 +26,8 @@ let number = {
 	THREE: "three"
 }
 
+// Card class: initialize instance variables
+	// instance variables: color, shape, pattern, number
 export default class Card {
 	constructor(color, shape, pattern, number) {
 		this.color = color;
@@ -66,11 +70,15 @@ export default class Card {
 
 }
 
+// create global variables for instance variables in Card class
+	// this will allow variables to be used in other files
 Card.colors = colors;
 Card.shapes = shapes;
 Card.pattern = pattern;
 Card.number = number;
 
+// isValid: checks 3 cards to determine if they are a valid "set"
+	// valid set: for all 3 cards, each attribute is all the same or all different
 function isValid(val1, val2, val3) {
 	if (val1 == val2 && val1 == val3) {
 		return true;
