@@ -17,7 +17,7 @@ export default class Deck {
 	}
 
 	removeCard(card) {
-		this.splice(this[card], 1);
+		this.splice(this.indexOf(card), 1);
 	}
 
 	removeSET(card1, card2, card3) {
@@ -31,8 +31,8 @@ export default class Deck {
 	}
 
 	getRandCard() {
-		rand_num = Math.random()*this.size();
-		rand_card = this[rand_num];
+		let rand_num = Math.random()*this.size();
+		let rand_card = this[rand_num];
 		return rand_card;
 	}
 
@@ -55,8 +55,8 @@ Deck.makeFullDeck = function () {
 
 Deck.makePlayingField = function (deck) {
 	let playingField = new Deck();
-	for (x = 0; x < 12; x++) {
-		rand_card = deck.getRandCard();
+	for (let x = 0; x < 12; x++) {
+		let rand_card = deck.getRandCard();
 		playingField.addToDeck(rand_card);
 		deck.removeCard(rand_card);
 	}
@@ -64,8 +64,8 @@ Deck.makePlayingField = function (deck) {
 }
 
 Deck.updatePlayingField = function (playingField, deck) {
-	for (x = 0; x < 3; x++) {
-		rand_card = deck.getRandCard();
+	for (let x = 0; x < 3; x++) {
+		let rand_card = deck.getRandCard();
 		playingField.addToDeck(rand_card);
 		deck.removeCard(rand_card);
 	}
