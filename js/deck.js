@@ -21,7 +21,9 @@ export default class Deck {
 	}
 
 	removeSET(card1, card2, card3) {
-
+		this.removeCard(card1);
+		this.removeCard(card2);
+		this.removeCard(card3);
 	}
 
 	size() {
