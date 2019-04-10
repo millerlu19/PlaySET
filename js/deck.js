@@ -17,10 +17,10 @@ export default class Deck {
 	}
 
 	removeCard(card) {
-		this.splice(this.indexOf(card), 1);
+		this.cardList.splice(this.cardList.indexOf(card), 1);
 	}
 
-	removeSET(card1, card2, card3) {
+	removeSet(card1, card2, card3) {
 		this.removeCard(card1);
 		this.removeCard(card2);
 		this.removeCard(card3);
