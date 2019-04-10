@@ -79,7 +79,7 @@ Card.number = number;
 
 // isValid: checks 3 cards to determine if they are a valid "set"
 	// valid set: for all 3 cards, each attribute is all the same or all different
-function isValid(val1, val2, val3) {
+function isSet(val1, val2, val3) {
 	if (val1 == val2 && val1 == val3) {
 		return true;
 	}
