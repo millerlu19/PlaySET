@@ -30,10 +30,10 @@ export default class Deck {
 		return this.cardList.length;
 	}
 
-	getRandCard() {
-		let rand_num = Math.random()*this.size();
-		let rand_card = this[rand_num];
-		return rand_card;
+	getCard(x) {
+		//let rand_num = Math.random()*this.size();
+		// let rand_card = this.cardList[rand_num];
+		return this.cardList[x];
 	}
 
 }
@@ -56,7 +56,7 @@ Deck.makeFullDeck = function () {
 Deck.makePlayingField = function (deck) {
 	let playingField = new Deck();
 	for (let x = 0; x < 12; x++) {
-		let rand_card = deck.getRandCard();
+		let rand_card = deck.getCard(0);
 		playingField.addToDeck(rand_card);
 		deck.removeCard(rand_card);
 	}
