@@ -13,15 +13,26 @@ export default class Selector {
 	}
 
 	selectCard(card) {
-		if (this.card1 != null) {
+		if (this.card1 == null) {
 			this.card1 = card;
 		}
-		else if (this.card2 != null) {
+		else if (this.card2 == null) {
 			this.card2 = card;
 		}
-		else if (this.card3 != null) {
+		else if (this.card3 == null) {
 			this.card3 = card;
 		}
+	}
+
+	getCard1(){
+		return this.card1;
+	}
+
+	getCard2(){
+		return this.card2;
+	}
+	getCard3(){
+		return this.card3;
 	}
 
 	resetSelectedCards() {
@@ -30,14 +41,15 @@ export default class Selector {
 		this.card3 = null;
 	}
 
-	checkSet(fullDeck, playingField) {
+	checkSet() {
 		if (Card.isSet(this.card1, this.card2, this.card3)) {
-			
-			playingField.removeSet(this.card1, this.card2, this.card3);
-			playingField.updatePlayingField(playingField, fullDeck);
+			return true;
+			// playingField.removeSet(this.card1, this.card2, this.card3);
+			// playingField.updatePlayingField(playingField, fullDeck);
 		}
 		else {
-			return this.resetSelectedCards();
+			this.resetSelectedCards();
+			return false;
 		}
 	}
 
