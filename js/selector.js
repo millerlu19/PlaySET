@@ -41,16 +41,107 @@ export default class Selector {
 		this.card3 = null;
 	}
 
-	checkSet() {
-		if (Card.isSet(this.card1, this.card2, this.card3)) {
-			return true;
-			// playingField.removeSet(this.card1, this.card2, this.card3);
-			// playingField.updatePlayingField(playingField, fullDeck);
+	checkSet(){
+		// if(Card.isSet(this.card1.getColor(), this.card2.getColor(), this.card3.getColor())){
+		// 	return true;
+		// }
+		if(this.card1.getColor() == this.card2.getColor() && this.card2.getColor() == this.card3.getColor())
+		{
+			if(this.card1.getShape() == this.card2.getShape() && this.card2.getShape() == this.card3.getShape())
+			{
+				if(this.card1.getPattern() == this.card2.getPattern() && this.card2.getPattern() == this.card3.getPattern())
+				{
+					if(this.card1.getNumber() != this.card2.getNumber() && this.card1.getNumber() != this.card3.getNumber() && this.card2.getNumber() != this.card3.getNumber())
+					{
+						return true;
+					}
+					else
+					{
+						return false;
+					}
+				}
+				else if(this.card1.getPattern() != this.card2.getPattern() && this.card1.getPattern() != this.card3.getPattern() && this.card2.getPattern() != this.card3.getPattern())
+				{
+					if(this.card1.getNumber() == this.card2.getNumber() && this.card2.getNumber() == this.card3.getNumber())
+					{
+						return true;
+					}
+					else
+					{
+						return false;
+					}
+				}
+				else
+				{
+					return false;
+				}
+			}
+			else if(this.card1.getShape() != this.card2.getShape() && this.card1.getShape() != this.card3.getShape() && this.card2.getShape() != this.card3.getShape())
+			{
+				if(this.card1.getPattern() == this.card2.getPattern() && this.card2.getPattern() == this.card3.getPattern())
+				{
+					if(this.card1.getNumber() == this.card2.getNumber() && this.card2.getNumber() == this.card3.getNumber())
+					{
+						return true;
+					}
+					else
+					{
+						return false
+					}
+				}
+				else
+				{
+					return false;
+				}
+			}
+			else
+			{
+				return false;
+			}
 		}
-		else {
-			this.resetSelectedCards();
+		else if(this.card1.getColor() != this.card2.getColor() && this.card1.getColor() != this.card3.getColor() && this.card2.getColor() != this.card3.getColor())
+		{
+			if(this.card1.getShape() == this.card2.getShape() && this.card2.getShape() == this.card3.getShape())
+			{
+				if(this.card1.getPattern() == this.card2.getPattern() && this.card2.getPattern() == this.card3.getPattern())
+				{
+					if(this.card1.getNumber() == this.card2.getNumber() && this.card2.getNumber() == this.card3.getNumber())
+					{
+						return true;
+					}
+				}
+			}
+			if(this.card1.getShape() != this.card2.getShape() && this.card1.getShape() != this.card3.getShape() && this.card2.getShape() != this.card3.getShape())
+			{
+				if(this.card1.getPattern() != this.card2.getPattern() && this.card1.getPattern() != this.card3.getPattern() && this.card2.getPattern() != this.card3.getPattern())
+				{
+					if(this.card1.getNumber() != this.card2.getNumber() && this.card1.getNumber() != this.card3.getNumber() && this.card2.getNumber() != this.card3.getNumber())
+					{
+						return true;
+					}
+				}
+			}
+		}
+		else
+		{
 			return false;
 		}
 	}
 
+
 }
+
+// Selector.checkSet= function(card1, card2, card3) {
+// 	var color1 = card1.getColor();
+// 	var color2 = card2.getColor();
+// 	var color3 = card3.getColor();
+// 	if (Card.isSet(color1, color2, color3)) {
+// 		return true;
+// 		// playingField.removeSet(this.card1, this.card2, this.card3);
+// 		// playingField.updatePlayingField(playingField, fullDeck);
+// 	}
+// 	else {
+// 		this.resetSelectedCards();
+// 		return false;
+// 	}
+// }

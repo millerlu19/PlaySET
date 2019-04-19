@@ -191,9 +191,305 @@ var click = function() {
 		}
 		
 	}
-	if(select.checkSet()){
-		
+	else if(i == 3){
+	var checkedSet = select.checkSet();
+
+	if(checkedSet == true){
+		if(select.getCard1() == card1){
+			rect.fill({color:'#FFFFFF'})
+		}
+
+		else if(select.getCard1() == card2){
+			rect2.fill({color:'#FFFFFF'})
+		}
+
+		else if(select.getCard1() == card3){
+			rect3.fill({color:'#FFFFFF'})
+		}
+
+		else if(select.getCard1() == card4){
+			rect4.fill({color:'#FFFFFF'})
+		}
+
+		else if(select.getCard1() == card5){
+			rect5.fill({color:'#FFFFFF'})
+		}
+
+		else if(select.getCard1() == card6){
+			rect6.fill({color:'#FFFFFF'})
+		}
+
+		else if(select.getCard1() == card7){
+			rect7.fill({color:'#FFFFFF'})
+		}
+
+		else if(select.getCard1() == card8){
+			rect8.fill({color:'#FFFFFF'})
+		}
+
+		else if(select.getCard1() == card9){
+			rect9.fill({color:'#FFFFFF'})
+		}
+
+		else if(select.getCard1() == card10){
+			rect10.fill({color:'#FFFFFF'})
+		}
+
+		else if(select.getCard1() == card11){
+			rect11.fill({color:'#FFFFFF'})
+		}
+
+		else if(select.getCard1() == card12){
+			rect12.fill({color:'#FFFFFF'})
+		}
+
+		if(select.getCard2() == card1){
+			rect.fill({color:'#FFFFFF'})
+		}
+
+		else if(select.getCard2() == card2){
+			rect2.fill({color:'#FFFFFF'})
+		}
+
+		else if(select.getCard2() == card3){
+			rect3.fill({color:'#FFFFFF'})
+		}
+
+		else if(select.getCard2() == card4){
+			rect4.fill({color:'#FFFFFF'})
+		}
+
+		else if(select.getCard2() == card5){
+			rect5.fill({color:'#FFFFFF'})
+		}
+
+		else if(select.getCard2() == card6){
+			rect6.fill({color:'#FFFFFF'})
+		}
+
+		else if(select.getCard2() == card7){
+			rect7.fill({color:'#FFFFFF'})
+		}
+
+		else if(select.getCard2() == card8){
+			rect8.fill({color:'#FFFFFF'})
+		}
+
+		else if(select.getCard2() == card9){
+			rect9.fill({color:'#FFFFFF'})
+		}
+
+		else if(select.getCard2() == card10){
+			rect10.fill({color:'#FFFFFF'})
+		}
+
+		else if(select.getCard2() == card11){
+			rect11.fill({color:'#FFFFFF'})
+		}
+
+		else if(select.getCard2() == card12){
+			rect12.fill({color:'#FFFFFF'})
+		}
+
+		if(select.getCard3() == card1){
+			rect.fill({color:'#FFFFFF'})
+		}
+
+		else if(select.getCard3() == card2){
+			rect2.fill({color:'#FFFFFF'})
+		}
+
+		else if(select.getCard3() == card3){
+			rect3.fill({color:'#FFFFFF'})
+		}
+
+		else if(select.getCard3() == card4){
+			rect4.fill({color:'#FFFFFF'})
+		}
+
+		else if(select.getCard3() == card5){
+			rect5.fill({color:'#FFFFFF'})
+		}
+
+		else if(select.getCard3() == card6){
+			rect6.fill({color:'#FFFFFF'})
+		}
+
+		else if(select.getCard3() == card7){
+			rect7.fill({color:'#FFFFFF'})
+		}
+
+		else if(select.getCard3() == card8){
+			rect8.fill({color:'#FFFFFF'})
+		}
+
+		else if(select.getCard3() == card9){
+			rect9.fill({color:'#FFFFFF'})
+		}
+
+		else if(select.getCard3() == card10){
+			rect10.fill({color:'#FFFFFF'})
+		}
+
+		else if(select.getCard3() == card11){
+			rect11.fill({color:'#FFFFFF'})
+		}
+
+		else if(select.getCard3() == card12){
+			rect12.fill({color:'#FFFFFF'})
+		}
+		select.resetSelectedCards();
+		i = 0;
 	}
+	else
+	{
+		if(select.getCard1() == card1){
+			rect.fill({color:'#000000'})
+		}
+
+		else if(select.getCard1() == card2){
+			rect2.fill({color:'#000000'})
+		}
+
+		else if(select.getCard1() == card3){
+			rect3.fill({color:'#000000'})
+		}
+
+		else if(select.getCard1() == card4){
+			rect4.fill({color:'#000000'})
+		}
+
+		else if(select.getCard1() == card5){
+			rect5.fill({color:'#000000'})
+		}
+
+		else if(select.getCard1() == card6){
+			rect6.fill({color:'#000000'})
+		}
+
+		else if(select.getCard1() == card7){
+			rect7.fill({color:'#000000'})
+		}
+
+		else if(select.getCard1() == card8){
+			rect8.fill({color:'#000000'})
+		}
+
+		else if(select.getCard1() == card9){
+			rect9.fill({color:'#000000'})
+		}
+
+		else if(select.getCard1() == card10){
+			rect10.fill({color:'#000000'})
+		}
+
+		else if(select.getCard1() == card11){
+			rect11.fill({color:'#000000'})
+		}
+
+		else if(select.getCard1() == card12){
+			rect12.fill({color:'#000000'})
+		}
+
+		if(select.getCard2() == card1){
+			rect.fill({color:'#000000'})
+		}
+
+		else if(select.getCard2() == card2){
+			rect2.fill({color:'#000000'})
+		}
+
+		else if(select.getCard2() == card3){
+			rect3.fill({color:'#000000'})
+		}
+
+		else if(select.getCard2() == card4){
+			rect4.fill({color:'#000000'})
+		}
+
+		else if(select.getCard2() == card5){
+			rect5.fill({color:'#000000'})
+		}
+
+		else if(select.getCard2() == card6){
+			rect6.fill({color:'#000000'})
+		}
+
+		else if(select.getCard2() == card7){
+			rect7.fill({color:'#000000'})
+		}
+
+		else if(select.getCard2() == card8){
+			rect8.fill({color:'#000000'})
+		}
+
+		else if(select.getCard2() == card9){
+			rect9.fill({color:'#000000'})
+		}
+
+		else if(select.getCard2() == card10){
+			rect10.fill({color:'#000000'})
+		}
+
+		else if(select.getCard2() == card11){
+			rect11.fill({color:'#000000'})
+		}
+
+		else if(select.getCard2() == card12){
+			rect12.fill({color:'#000000'})
+		}
+
+		if(select.getCard3() == card1){
+			rect.fill({color:'#000000'})
+		}
+
+		else if(select.getCard3() == card2){
+			rect2.fill({color:'#000000'})
+		}
+
+		else if(select.getCard3() == card3){
+			rect3.fill({color:'#000000'})
+		}
+
+		else if(select.getCard3() == card4){
+			rect4.fill({color:'#000000'})
+		}
+
+		else if(select.getCard3() == card5){
+			rect5.fill({color:'#000000'})
+		}
+
+		else if(select.getCard3() == card6){
+			rect6.fill({color:'#000000'})
+		}
+
+		else if(select.getCard3() == card7){
+			rect7.fill({color:'#000000'})
+		}
+
+		else if(select.getCard3() == card8){
+			rect8.fill({color:'#000000'})
+		}
+
+		else if(select.getCard3() == card9){
+			rect9.fill({color:'#000000'})
+		}
+
+		else if(select.getCard3() == card10){
+			rect10.fill({color:'#000000'})
+		}
+
+		else if(select.getCard3() == card11){
+			rect11.fill({color:'#000000'})
+		}
+
+		else if(select.getCard3() == card12){
+			rect12.fill({color:'#000000'})
+		}
+		select.resetSelectedCards();
+		i = 0;
+	}
+}
 	
 	// if (i%2 == 0){
 	// 	this.fill({color:'#32CD32'});
